@@ -107,14 +107,14 @@ export const fallbackHomePage: HomePage = {
     subtitle:
       'Play popular live table games, slots, and interactive casino titles with instant rewards.',
     games: [
-      {name: '7Up 7Down', provider: 'KINGMAKER', badge: 'BONUS', image: '/images/7up-7down.jpg' as never},
-      {name: 'Dragon Tiger', provider: 'KINGMAKER', badge: '2X BONUS', image: '/images/dragon-tiger.jpg' as never},
-      {name: 'Roulette', provider: 'KINGMAKER', badge: 'BONUS', image: '/images/roulette.jpg' as never},
-      {name: 'Teenpatti', provider: 'KINGMAKER', image: '/images/teenpatti.jpg' as never},
-      {name: 'Rummy', provider: 'JILI', badge: '1000X', badgeStyle: 'gold', image: '/images/rummy.jpg' as never},
-      {name: 'Mega Fishing', provider: 'JILI', badge: '+ NEW', badgeStyle: 'cyan', image: '/images/mega-fishing.jpg' as never},
-      {name: 'Poker', provider: 'JILI', badge: '1000X', badgeStyle: 'gold', image: '/images/poker.jpg' as never},
-      {name: 'Coin Toss', provider: 'KINGMAKER', badge: 'BONUS', image: '/images/coin-toss.jpg' as never},
+      {name: '7Up 7Down', provider: '7Up 7Down', badge: 'BONUS', image: '/images/7up-7down.jpg' as never},
+      {name: 'Dragon Tiger', provider: 'MAC88', badge: '2X BONUS', image: '/images/dragon-tiger.jpg' as never},
+      {name: 'Roulette', provider: 'Roulette', badge: 'BONUS', image: '/images/roulette.jpg' as never},
+      {name: 'Teenpatti', provider: 'Teen Patti', image: '/images/teenpatti.jpg' as never},
+      {name: 'Rummy', provider: 'Rummy', badge: '1000X', badgeStyle: 'gold', image: '/images/rummy.jpg' as never},
+      {name: 'Mega Fishing', provider: 'EZUGI', badge: '+ NEW', badgeStyle: 'cyan', image: '/images/mega-fishing.jpg' as never},
+      {name: 'Poker', provider: 'Poker', badge: '1000X', badgeStyle: 'gold', image: '/images/poker.jpg' as never},
+      {name: 'Coin Toss', provider: 'SPRIBE', badge: 'BONUS', image: '/images/coin-toss.jpg' as never},
     ],
   },
   aboutSection: {

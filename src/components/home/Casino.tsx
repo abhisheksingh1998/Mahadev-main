@@ -4,6 +4,17 @@ import { useWhatsAppUrl } from "@/components/SiteSettingsProvider";
 import { imageUrl } from "@/lib/sanity";
 import type { CasinoGame } from "@/lib/types";
 
+const CASINO_FOOTER_LABELS = [
+  "7Up 7Down",
+  "MAC88",
+  "Roulette",
+  "Teen Patti",
+  "Rummy",
+  "EZUGI",
+  "Poker",
+  "SPRIBE",
+] as const;
+
 export function Casino({
   title,
   subtitle,
@@ -32,6 +43,8 @@ export function Casino({
                 : game.badgeStyle === "cyan"
                   ? "cyan-badge"
                   : "";
+            const footerLabel =
+              CASINO_FOOTER_LABELS[index] || game.provider || "7Up 7Down";
             return (
               <a
                 key={`${game.name}-${index}`}
@@ -52,7 +65,7 @@ export function Casino({
                     alt={game.name || "Casino game"}
                   />
                 </div>
-                <div className="casino-footer">{game.provider || "KINGMAKER"}</div>
+                <div className="casino-footer">{footerLabel}</div>
               </a>
             );
           })}
