@@ -1,0 +1,17 @@
+@layer theme, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme inline {
+  --color-bg-dark: #0a0d14;
+  --color-accent-gold: #d4af37;
+  --color-accent-gold-light: #f3e5ab;
+  --color-accent-green: #25d366;
+  --color-accent-cyan: #00f2fe;
+  --color-text-main: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --font-display: var(--font-cinzel), serif;
+  --font-sans: var(--font-jakarta), sans-serif;
+}
+
+@import "../styles/mahadev.css";
