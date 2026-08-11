@@ -19,8 +19,8 @@ export const fallbackSiteSettings: SiteSettings = {
   footer: {
     description:
       "India's most trusted online sports ID provider. Delivering security, transparency, and top-tier betting experiences 24/7.",
-    email: 'support@mahadevbook.com',
-    copyright: '© 2026 Mahadev Book. All Rights Reserved. Demo UI Platform.',
+    email: undefined,
+    copyright: '© 2026 Mahadev Book. All Rights Reserved.',
   },
 }
 

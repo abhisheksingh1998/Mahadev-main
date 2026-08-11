@@ -1052,6 +1052,19 @@ footer {
   font-size: 0.95rem;
 }
 
+.footer-contact a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--accent-gold);
+}
+
 .footer-contact i {
   color: var(--accent-gold);
 }

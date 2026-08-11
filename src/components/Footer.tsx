@@ -111,12 +111,14 @@ export function Footer({ variant = "home" }: { variant?: "home" | "inner" }) {
             <h4 className="footer-title">Contact Us</h4>
             <ul className="footer-contact">
               <li>
-                <i className="fa-brands fa-whatsapp" /> Instant WhatsApp Customer
-                Care
-              </li>
-              <li>
-                <i className="fa-solid fa-envelope" />{" "}
-                {footer?.email || "support@mahadevbook.com"}
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa-brands fa-whatsapp" /> Instant WhatsApp
+                  Customer Care
+                </a>
               </li>
               <li>
                 <i className="fa-solid fa-clock" /> 24/7 / 365 Days Service
@@ -135,8 +137,8 @@ export function Footer({ variant = "home" }: { variant?: "home" | "inner" }) {
 
         <div className="footer-bottom">
           <p>
-            {footer?.copyright ||
-              "© 2026 Mahadev Book. All Rights Reserved. Demo UI Platform."}
+            {footer?.copyright?.replace(/\s*Demo UI Platform\.?/i, "").trim() ||
+              "© 2026 Mahadev Book. All Rights Reserved."}
           </p>
           <div className="footer-legal">
             <a href="#">Privacy Policy</a>
