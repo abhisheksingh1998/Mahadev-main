@@ -45,13 +45,10 @@ export function Footer({ variant = "home" }: { variant?: "home" | "inner" }) {
       : [
           { label: "FAQ", href: href("#faq") },
           ...(variant === "home" ? [{ label: "Blog Articles", href: "#blog" }] : []),
-          ...(variant === "inner"
-            ? [{ label: "Responsible Gaming", href: "#" }]
-            : []),
         ]
   ).filter(
     (link) =>
-      !/^(privacy policy|terms (&|and) conditions|terms of use)$/i.test(
+      !/^(privacy policy|terms (&|and) conditions|terms of use|responsible gaming)$/i.test(
         link.label || "",
       ),
   );
@@ -145,9 +142,6 @@ export function Footer({ variant = "home" }: { variant?: "home" | "inner" }) {
             {footer?.copyright?.replace(/\s*Demo UI Platform\.?/i, "").trim() ||
               "© 2026 Mahadev Book. All Rights Reserved."}
           </p>
-          <div className="footer-legal">
-            <a href="#">Responsible Gaming</a>
-          </div>
         </div>
       </div>
     </footer>
