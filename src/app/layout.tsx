@@ -28,6 +28,11 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: settings.title || 'Mahadev Book',
     description: settings.description,
+    icons: {
+      icon: [{url: '/favicon.png', type: 'image/png'}],
+      shortcut: '/favicon.png',
+      apple: '/favicon.png',
+    },
   }
 }
 
