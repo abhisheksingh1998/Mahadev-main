@@ -7,6 +7,7 @@ import { ArticleDetail } from "@/components/blog/ArticleDetail";
 import {
   getPostBySlug,
   getPostSlugs,
+  getPosts,
   getRelatedPosts,
 } from "@/lib/queries";
 
@@ -38,13 +39,17 @@ export default async function ArticlePage({ params }: PageProps) {
   const article = await getPostBySlug(slug);
   if (!article) notFound();
 
-  const related = await getRelatedPosts(slug);
+  const [related, allPosts] = await Promise.all([
+    getRelatedPosts(slug),
+    getPosts(),
+  ]);
+  const popular = allPosts.filter((post) => post.slug !== slug).slice(0, 5);
 
   return (
     <>
       <ReadingProgress />
       <Header variant="inner" active="blog" />
-      <ArticleDetail article={article} related={related} />
+      <ArticleDetail article={article} related={related} popular={popular} />
       <Footer variant="inner" />
     </>
   );

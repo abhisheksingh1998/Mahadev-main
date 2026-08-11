@@ -31,7 +31,7 @@ const portableComponents: PortableTextComponents = {
   },
 };
 
-function ArticleSidebar() {
+function ArticleSidebar({ posts }: { posts: PostCard[] }) {
   const whatsappUrl = useWhatsAppUrl();
 
   return (
@@ -64,56 +64,33 @@ function ArticleSidebar() {
         </a>
       </div>
 
-      <div className="sidebar-widget glass-card" data-aos="fade-up">
-        <h4 className="widget-title">Popular Articles</h4>
-        <div className="popular-posts-list">
-          <a href="#" className="popular-post-item">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=150&q=80"
-              alt="Betting ID Security"
-            />
-            <div>
-              <span className="post-date">
-                <i className="fa-solid fa-calendar-days" /> Aug 2, 2026
-              </span>
-              <h5 className="post-heading">
-                How to Verify Your Online Betting ID Safely
-              </h5>
-            </div>
-          </a>
-          <a href="#" className="popular-post-item">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://images.unsplash.com/photo-1606168094336-48f205276929?auto=format&fit=crop&w=150&q=80"
-              alt="Live Casino Roulette"
-            />
-            <div>
-              <span className="post-date">
-                <i className="fa-solid fa-calendar-days" /> Jul 26, 2026
-              </span>
-              <h5 className="post-heading">
-                Mastering Live Roulette & Dragon Tiger
-              </h5>
-            </div>
-          </a>
-          <a href="#" className="popular-post-item">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=150&q=80"
-              alt="UPI Instant Payouts"
-            />
-            <div>
-              <span className="post-date">
-                <i className="fa-solid fa-calendar-days" /> Jul 18, 2026
-              </span>
-              <h5 className="post-heading">
-                Instant Withdrawal Guarantees & Payouts
-              </h5>
-            </div>
-          </a>
+      {posts.length > 0 ? (
+        <div className="sidebar-widget glass-card" data-aos="fade-up">
+          <h4 className="widget-title">Popular Articles</h4>
+          <div className="popular-posts-list">
+            {posts.map((post) => (
+              <Link
+                key={post._id || post.slug}
+                href={`/blog/${post.slug}`}
+                className="popular-post-item"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={imageUrl(post.mainImage, 150) || "/images/logo.png"}
+                  alt={post.title || "Blog post"}
+                />
+                <div>
+                  <span className="post-date">
+                    <i className="fa-solid fa-calendar-days" />{" "}
+                    {formatPostDate(post.publishedAt)}
+                  </span>
+                  <h5 className="post-heading">{post.title}</h5>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
+      ) : null}
 
       <div className="sidebar-widget glass-card" data-aos="fade-up">
         <h4 className="widget-title">Categories</h4>
@@ -149,9 +126,11 @@ function ArticleSidebar() {
 export function ArticleDetail({
   article,
   related,
+  popular,
 }: {
   article: PostDetail;
   related: PostCard[];
+  popular: PostCard[];
 }) {
   const sections = article.sections || [];
   const toc =
@@ -230,22 +209,6 @@ export function ArticleDetail({
               />
             </div>
 
-            <div className="share-sticky-bar">
-              <span className="share-title">SHARE</span>
-              <a href="#" className="share-btn fb" aria-label="Share on Facebook">
-                <i className="fa-brands fa-facebook-f" />
-              </a>
-              <a href="#" className="share-btn tw" aria-label="Share on Twitter">
-                <i className="fa-brands fa-twitter" />
-              </a>
-              <a href="#" className="share-btn wa" aria-label="Share on WhatsApp">
-                <i className="fa-brands fa-whatsapp" />
-              </a>
-              <a href="#" className="share-btn tg" aria-label="Share on Telegram">
-                <i className="fa-brands fa-telegram" />
-              </a>
-            </div>
-
             {toc.length > 0 ? (
               <div className="toc-box glass-card">
                 <div className="toc-header">
@@ -312,7 +275,7 @@ export function ArticleDetail({
             ) : null}
           </main>
 
-          <ArticleSidebar />
+          <ArticleSidebar posts={popular} />
         </div>
       </section>
 
