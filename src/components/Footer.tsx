@@ -3,26 +3,11 @@
 import Link from "next/link";
 import { useSiteSettings, useWhatsAppUrl } from "@/components/SiteSettingsProvider";
 
-const socialIcon: Record<string, string> = {
-  facebook: "fa-brands fa-facebook-f",
-  instagram: "fa-brands fa-instagram",
-  telegram: "fa-brands fa-telegram",
-  twitter: "fa-brands fa-twitter",
-};
-
 export function Footer({ variant = "home" }: { variant?: "home" | "inner" }) {
   const settings = useSiteSettings();
   const whatsappUrl = useWhatsAppUrl();
   const href = (hash: string) => (variant === "home" ? hash : `/${hash}`);
   const footer = settings.footer;
-  const socials = footer?.socialLinks?.length
-    ? footer.socialLinks
-    : [
-        { platform: "facebook", url: "#" },
-        { platform: "instagram", url: "#" },
-        { platform: "telegram", url: "#" },
-        { platform: "twitter", url: "#" },
-      ];
 
   const quickLinks = footer?.quickLinks?.length
     ? footer.quickLinks
@@ -68,21 +53,6 @@ export function Footer({ variant = "home" }: { variant?: "home" | "inner" }) {
               {footer?.description ||
                 "India's most trusted online sports ID provider. Delivering security, transparency, and top-tier betting experiences 24/7."}
             </p>
-            <div className="social-links">
-              {socials.map((s) => (
-                <a
-                  key={`${s.platform}-${s.url}`}
-                  href={s.url || "#"}
-                  className="social-icon"
-                >
-                  <i
-                    className={
-                      socialIcon[s.platform || ""] || "fa-brands fa-globe"
-                    }
-                  />
-                </a>
-              ))}
-            </div>
           </div>
 
           <div>
