@@ -39,17 +39,22 @@ export function Footer({ variant = "home" }: { variant?: "home" | "inner" }) {
           : [{ label: "Blog & Guides", href: "/blog" }]),
       ];
 
-  const supportLinks = footer?.supportLinks?.length
-    ? footer.supportLinks
-    : [
-        { label: "FAQ", href: href("#faq") },
-        ...(variant === "home" ? [{ label: "Blog Articles", href: "#blog" }] : []),
-        { label: "Terms of Use", href: "#" },
-        { label: "Privacy Policy", href: "#" },
-        ...(variant === "inner"
-          ? [{ label: "Responsible Gaming", href: "#" }]
-          : []),
-      ];
+  const supportLinks = (
+    footer?.supportLinks?.length
+      ? footer.supportLinks
+      : [
+          { label: "FAQ", href: href("#faq") },
+          ...(variant === "home" ? [{ label: "Blog Articles", href: "#blog" }] : []),
+          ...(variant === "inner"
+            ? [{ label: "Responsible Gaming", href: "#" }]
+            : []),
+        ]
+  ).filter(
+    (link) =>
+      !/^(privacy policy|terms (&|and) conditions|terms of use)$/i.test(
+        link.label || "",
+      ),
+  );
 
   return (
     <footer>
@@ -141,8 +146,6 @@ export function Footer({ variant = "home" }: { variant?: "home" | "inner" }) {
               "© 2026 Mahadev Book. All Rights Reserved."}
           </p>
           <div className="footer-legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
             <a href="#">Responsible Gaming</a>
           </div>
         </div>
