@@ -1323,6 +1323,15 @@ footer {
   }
 }
 
+/* Mobile phones only — keep tablet/desktop container spacing unchanged */
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
 @media (max-width: 600px) {
   .matches-image-grid {
     grid-template-columns: 1fr;
