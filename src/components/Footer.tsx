@@ -110,7 +110,7 @@ export function Footer({ variant = "home" }: { variant?: "home" | "inner" }) {
         <div className="footer-bottom">
           <p>
             {footer?.copyright?.replace(/\s*Demo UI Platform\.?/i, "").trim() ||
-              "© 2026 Fairplay. All Rights Reserved."}
+              "© 2026 Mahadev Book. All Rights Reserved."}
           </p>
         </div>
       </div>

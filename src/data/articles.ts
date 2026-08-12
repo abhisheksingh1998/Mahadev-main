@@ -36,9 +36,9 @@ export function getRelatedArticles(slug: string, limit = 2): Article[] {
 }
 
 export const blogListingMeta = {
-  title: "Blog & Sports News | Fairplay",
+  title: "Blog & Sports News | Mahadev Book",
   description:
-    "Stay updated with the latest sports news, IPL betting guides, match predictions, and expert strategies on Fairplay Blog.",
+    "Stay updated with the latest sports news, IPL betting guides, match predictions, and expert strategies on Mahadev Book Blog.",
 };
 
 export const BLOCKQUOTE = {

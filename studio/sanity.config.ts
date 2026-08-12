@@ -31,7 +31,7 @@ const structure = (S: any) =>
 
 export default defineConfig({
   name: 'mahadev-studio',
-  title: 'Fairplay CMS',
+  title: 'Mahadev Book CMS',
   projectId,
   dataset,
   plugins: [structureTool({structure}), visionTool()],

@@ -181,7 +181,7 @@ export function ArticleDetail({
               <div>
                 <span className="meta-label">Written by</span>
                 <span className="meta-value">
-                  {article.authorName || "Fairplay"}
+                  {article.authorName || "Mahadev Book"}
                 </span>
               </div>
             </div>
@@ -313,7 +313,7 @@ export function ArticleDetail({
                       style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}
                     >
                       <i className="fa-solid fa-user" />{" "}
-                      {post.authorName || "Fairplay"}
+                      {post.authorName || "Mahadev Book"}
                     </span>
                     <Link href={`/blog/${post.slug}`} className="read-more-link">
                       Read More <i className="fa-solid fa-arrow-right" />

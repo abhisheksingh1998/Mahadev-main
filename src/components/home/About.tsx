@@ -20,7 +20,7 @@ export function About({
       <div className="container">
         <div className="glass-card about-content" data-aos="zoom-in">
           <h2 className="section-title">
-            {title || "Fairplay | Online Sports Betting ID Provider"}
+            {title || "Mahadev Book | Online Sports Betting ID Provider"}
           </h2>
           {eyebrow ? (
             <div className="title-wrapper">

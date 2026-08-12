@@ -71,7 +71,7 @@ export function BlogListing({ articles }: { articles: PostCard[] }) {
                   </div>
                   <div>
                     <span className="author-name">
-                      {featured.authorName || "Fairplay"}
+                      {featured.authorName || "Mahadev Book"}
                     </span>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ export function BlogListing({ articles }: { articles: PostCard[] }) {
                     style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}
                   >
                     <i className="fa-solid fa-user" />{" "}
-                    {article.authorName || "Fairplay"}
+                    {article.authorName || "Mahadev Book"}
                   </span>
                   <Link
                     href={`/blog/${article.slug}`}

@@ -1,6 +1,6 @@
-# Fairplay — Sanity Studio
+# Mahadev Book — Sanity Studio
 
-Standalone Sanity Studio for the Fairplay website (same pattern as Altertype).
+Standalone Sanity Studio for the Mahadev Book website (same pattern as Altertype).
 
 - **Studio** (this folder): edit content — deploy/host on your server or via `sanity deploy`
 - **Next.js app** (repo root): reads published content — deploy on Vercel
