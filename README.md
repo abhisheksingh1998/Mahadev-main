@@ -1,4 +1,4 @@
-# Mahadev Book
+# Fairplay
 
 Next.js + Tailwind frontend with a **standalone Sanity Studio** (Altertype-style split).
 

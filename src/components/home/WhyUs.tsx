@@ -16,7 +16,7 @@ export function WhyUs({
     <section id="why-us" style={{ background: "rgba(0,0,0,0.2)" }}>
       <div className="container">
         <div className="title-wrapper" data-aos="fade-up">
-          <h2 className="section-title">{title || "Why Consider Mahadev Book?"}</h2>
+          <h2 className="section-title">{title || "Why Consider Fairplay?"}</h2>
           {subtitle ? <p className="section-subtitle">{subtitle}</p> : null}
         </div>
 

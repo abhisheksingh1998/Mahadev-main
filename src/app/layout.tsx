@@ -26,7 +26,7 @@ const jakarta = Plus_Jakarta_Sans({
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettings()
   return {
-    title: settings.title || 'Mahadev Book',
+    title: settings.title || 'Fairplay',
     description: settings.description,
     icons: {
       icon: [{url: '/favicon.png', type: 'image/png'}],

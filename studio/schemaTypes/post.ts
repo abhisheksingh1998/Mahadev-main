@@ -53,7 +53,7 @@ export default defineType({
       name: 'authorName',
       title: 'Author Name',
       type: 'string',
-      initialValue: 'Mahadev Book',
+      initialValue: 'Fairplay',
     }),
     defineField({
       name: 'authorImage',

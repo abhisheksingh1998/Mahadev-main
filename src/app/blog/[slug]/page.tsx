@@ -29,7 +29,7 @@ export async function generateMetadata({
   const article = await getPostBySlug(slug);
   if (!article) return {};
   return {
-    title: article.seoTitle || `${article.title} | Mahadev Book Blog`,
+    title: article.seoTitle || `${article.title} | Fairplay Blog`,
     description: article.seoDescription || article.excerpt,
   };
 }

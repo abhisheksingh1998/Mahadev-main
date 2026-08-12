@@ -3,9 +3,9 @@ import articlesJson from '@/data/articles.json'
 import {WHATSAPP_URL} from '@/data/site'
 
 export const fallbackSiteSettings: SiteSettings = {
-  title: 'Mahadev Book | Premium Online Sports Betting ID Provider',
+  title: 'Fairplay | Premium Online Sports Betting ID Provider',
   description:
-    'Experience secure, transparent, and immersive online sports betting with Mahadev Book. Get instant IDs, competitive odds, and 24/7 WhatsApp support.',
+    'Experience secure, transparent, and immersive online sports betting with Fairplay. Get instant IDs, competitive odds, and 24/7 WhatsApp support.',
   whatsappUrl: WHATSAPP_URL,
   whatsappTooltip: 'Get Instant ID On WhatsApp',
   headerNav: [
@@ -20,7 +20,7 @@ export const fallbackSiteSettings: SiteSettings = {
     description:
       "India's most trusted online sports ID provider. Delivering security, transparency, and top-tier betting experiences 24/7.",
     email: undefined,
-    copyright: '© 2026 Mahadev Book. All Rights Reserved.',
+    copyright: '© 2026 Fairplay. All Rights Reserved.',
   },
 }
 
@@ -118,16 +118,16 @@ export const fallbackHomePage: HomePage = {
     ],
   },
   aboutSection: {
-    title: 'Mahadev Book | Online Sports Betting ID Provider',
+    title: 'Fairplay | Online Sports Betting ID Provider',
     eyebrow: 'Transparency • Security • Excitement',
     paragraphs: [
-      'At Mahadev Book, our passion for cricket drives everything we do. Backed by a team of enthusiasts deeply entrenched in the world of cricket, we have only one aim: to provide a secure, transparent, and immersive cricket betting experience for every user. We envision a platform that celebrates sport while offering an exceptional betting experience to fellow fans.',
+      'At Fairplay, our passion for cricket drives everything we do. Backed by a team of enthusiasts deeply entrenched in the world of cricket, we have only one aim: to provide a secure, transparent, and immersive cricket betting experience for every user. We envision a platform that celebrates sport while offering an exceptional betting experience to fellow fans.',
       "With a focus on user experience and safety, we've curated a platform that's not just about betting but fostering a community of responsible cricket betting enthusiasts.",
     ],
     ctaLabel: 'Get Your Instant Demo ID Now',
   },
   featuresSection: {
-    title: 'Why Consider Mahadev Book?',
+    title: 'Why Consider Fairplay?',
     subtitle:
       'We offer unmatched features tailored for high-stakes sports enthusiasts and casual bettors alike.',
     features: [
@@ -162,7 +162,7 @@ export const fallbackHomePage: HomePage = {
     title: 'Bet Big -',
     titleHighlight: 'Win Bigger',
     description:
-      'Step into the premier arena of online gaming. With Mahadev Book, get access to higher betting limits, instant market settlements, and exclusive VIP support for large accounts. Elevate your sports viewing into an exhilarating winning experience today!',
+      'Step into the premier arena of online gaming. With Fairplay, get access to higher betting limits, instant market settlements, and exclusive VIP support for large accounts. Elevate your sports viewing into an exhilarating winning experience today!',
     ctaLabel: 'Connect on WhatsApp Now',
     image: '/images/win-big.jpg' as never,
   },
@@ -175,9 +175,9 @@ export const fallbackHomePage: HomePage = {
     subtitle: 'Got questions? We have got all the answers you need to get started.',
     items: [
       {
-        question: 'What is Mahadev Book?',
+        question: 'What is Fairplay?',
         answer:
-          "Mahadev Book is India's leading online sports betting ID provider, offering transparent, secure, and instant access to top gaming platforms with competitive odds and 24/7 service.",
+          "Fairplay is India's leading online sports betting ID provider, offering transparent, secure, and instant access to top gaming platforms with competitive odds and 24/7 service.",
       },
       {
         question: 'How do I register?',
@@ -252,7 +252,7 @@ fallbackHomePage.heroSlides = [
     image: '/images/home-banner-2.jpg' as never,
     subtitle: '24/7 Dedicated Support',
     title: 'Win Big With',
-    titleHighlight: 'Mahadev Book',
+    titleHighlight: 'Fairplay',
     description:
       "Join India's largest gaming network. Superior platform tech with guaranteed privacy and round-the-clock service.",
     primaryCtaLabel: 'Register Today',
@@ -290,7 +290,7 @@ export const fallbackPosts: PostDetail[] = (
   mainImage: article.featuredImage as never,
   categoryTitle: article.category,
   breadcrumb: article.breadcrumb,
-  authorName: 'Mahadev Book',
+  authorName: 'Fairplay',
   authorImage: article.authorImg as never,
   featured: index === 1,
   sections: article.sections,

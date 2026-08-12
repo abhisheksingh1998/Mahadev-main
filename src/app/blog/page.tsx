@@ -9,9 +9,9 @@ export const revalidate = 60;
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettings();
   return {
-    title: `Blog & Sports News | ${settings.title?.split("|")[0]?.trim() || "Mahadev Book"}`,
+    title: `Blog & Sports News | ${settings.title?.split("|")[0]?.trim() || "Fairplay"}`,
     description:
-      "Stay updated with the latest sports news, IPL betting guides, match predictions, and expert strategies on Mahadev Book Blog.",
+      "Stay updated with the latest sports news, IPL betting guides, match predictions, and expert strategies on Fairplay Blog.",
   };
 }
 
@@ -28,7 +28,7 @@ export default async function BlogPage() {
             <i className="fa-solid fa-newspaper" /> Official Insights & News
           </span>
           <h1 className="hero-title">
-            Mahadev Book <span>Blog & Guides</span>
+            Fairplay <span>Blog & Guides</span>
           </h1>
           <p className="hero-desc">
             Explore expert strategies, IPL match analyses, online sports betting

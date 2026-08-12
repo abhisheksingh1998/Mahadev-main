@@ -1,6 +1,6 @@
 export const WHATSAPP_URL = "https://wa.link/mahadevbookonlinee";
 
-export const SITE_NAME = "Mahadev Book";
+export const SITE_NAME = "Fairplay";
 
 export const navLinksHome = [
   { href: "/#live-matches", label: "Live Matches" },
