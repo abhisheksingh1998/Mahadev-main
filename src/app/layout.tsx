@@ -12,6 +12,7 @@ import {WhatsAppFloat} from '@/components/WhatsAppFloat'
 import {SiteSettingsProvider} from '@/components/SiteSettingsProvider'
 import {getSiteSettings} from '@/lib/queries'
 
+
 const cinzel = Cinzel({
   variable: '--font-cinzel',
   subsets: ['latin'],
