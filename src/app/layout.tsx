@@ -26,9 +26,15 @@ const jakarta = Plus_Jakarta_Sans({
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettings()
+
   return {
     title: settings.title || 'Mahadev Book',
     description: settings.description,
+
+    verification: {
+      google: 'CxZyiZUZSwTca_gtmrCTEVACSfrNQgva8xJ3PbcY6O0',
+    },
+
     icons: {
       icon: [{url: '/favicon.png', type: 'image/png'}],
       shortcut: '/favicon.png',
@@ -70,6 +76,7 @@ export default async function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
       </head>
+
       <body>
         <SiteSettingsProvider settings={settings}>
           <AOSProvider>
