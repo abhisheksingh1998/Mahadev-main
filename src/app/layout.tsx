@@ -12,7 +12,6 @@ import {WhatsAppFloat} from '@/components/WhatsAppFloat'
 import {SiteSettingsProvider} from '@/components/SiteSettingsProvider'
 import {getSiteSettings} from '@/lib/queries'
 
-
 const cinzel = Cinzel({
   variable: '--font-cinzel',
   subsets: ['latin'],
@@ -52,17 +51,20 @@ export default async function RootLayout({
       <head>
         {/* Google tag (gtag.js) */}
         <Script
+          id="google-analytics-script"
           src="https://www.googletagmanager.com/gtag/js?id=G-YFZFKY8NBJ"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+
+        <Script id="google-analytics" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-YFZFKY8NBJ');
           `}
         </Script>
+
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
