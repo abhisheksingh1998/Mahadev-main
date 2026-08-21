@@ -119,6 +119,66 @@ const ARTICLE_SEO: Record<
       },
     ],
   },
+  "mahadev-book-your-ultimate-online-cricket-betting-id-provider-in-india": {
+    title:
+      "Mahadev Book: Your Ultimate Online Cricket Betting ID Provider in India",
+    description:
+      "Get your online cricket betting ID with Mahadev Book, India's trusted provider — instant activation, secure play, live odds, and 24/7 WhatsApp support.",
+    canonical:
+      "https://mahadevbook.page/blog/mahadev-book-your-ultimate-online-cricket-betting-id-provider-in-india",
+    ogImage: "https://mahadevbook.page/og-image.jpg",
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id":
+            "https://mahadevbook.page/blog/mahadev-book-your-ultimate-online-cricket-betting-id-provider-in-india",
+        },
+        headline:
+          "Mahadev Book: Your Ultimate Online Cricket Betting ID Provider in India",
+        description:
+          "Get your online cricket betting ID with Mahadev Book, India's trusted provider — instant activation, secure play, live odds, and 24/7 WhatsApp support.",
+        image: "https://mahadevbook.page/blog-image.jpg",
+        author: { "@type": "Organization", name: "Mahadev Book" },
+        publisher: {
+          "@type": "Organization",
+          name: "Mahadev Book",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://mahadevbook.page/logo.png",
+          },
+        },
+        datePublished: "2026-08-17",
+        dateModified: "2026-08-17",
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://mahadevbook.page/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blog",
+            item: "https://mahadevbook.page/blog",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Mahadev Book: Your Ultimate Online Cricket Betting ID Provider in India",
+            item: "https://mahadevbook.page/blog/mahadev-book-your-ultimate-online-cricket-betting-id-provider-in-india",
+          },
+        ],
+      },
+    ],
+  },
 };
 
 export async function generateStaticParams() {
