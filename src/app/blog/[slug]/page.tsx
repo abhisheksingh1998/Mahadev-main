@@ -24,7 +24,7 @@ const ARTICLE_SEO: Record<
     description: string;
     canonical: string;
     ogImage: string;
-    jsonLd: Record<string, unknown>;
+    jsonLd: Record<string, unknown>[];
   }
 > = {
   "mahadev-book-explore-an-exciting-online-casino-experience": {
@@ -34,30 +34,90 @@ const ARTICLE_SEO: Record<
     canonical:
       "https://mahadevbook.page/blog/mahadev-book-explore-an-exciting-online-casino-experience",
     ogImage: "https://mahadevbook.page/og-image.jpg",
-    jsonLd: {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      mainEntityOfPage: {
-        "@type": "WebPage",
-        "@id":
-          "https://mahadevbook.page/blog/mahadev-book-explore-an-exciting-online-casino-experience",
-      },
-      headline: "Mahadev Book: Explore an Exciting Online Casino Experience",
-      description:
-        "Discover Mahadev Book's online casino — live dealer tables, slots, and top casino games with fast deposits, secure play, and round-the-clock support in India.",
-      image: "https://mahadevbook.page/blog-image.jpg",
-      author: { "@type": "Organization", name: "Mahadev Book" },
-      publisher: {
-        "@type": "Organization",
-        name: "Mahadev Book",
-        logo: {
-          "@type": "ImageObject",
-          url: "https://mahadevbook.page/logo.png",
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id":
+            "https://mahadevbook.page/blog/mahadev-book-explore-an-exciting-online-casino-experience",
         },
+        headline: "Mahadev Book: Explore an Exciting Online Casino Experience",
+        description:
+          "Discover Mahadev Book's online casino — live dealer tables, slots, and top casino games with fast deposits, secure play, and round-the-clock support in India.",
+        image: "https://mahadevbook.page/blog-image.jpg",
+        author: { "@type": "Organization", name: "Mahadev Book" },
+        publisher: {
+          "@type": "Organization",
+          name: "Mahadev Book",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://mahadevbook.page/logo.png",
+          },
+        },
+        datePublished: "2026-08-17",
+        dateModified: "2026-08-17",
       },
-      datePublished: "2026-08-17",
-      dateModified: "2026-08-17",
-    },
+    ],
+  },
+  "mahadev-book-best-cricket-betting-exchange-sites-in-india": {
+    title: "Mahadev Book – Best Cricket Betting Exchange Sites in India",
+    description:
+      "Compare the best cricket betting exchange sites in India with Mahadev Book — top odds, live in-play markets, fast withdrawals, and a trusted betting ID.",
+    canonical:
+      "https://mahadevbook.page/blog/mahadev-book-best-cricket-betting-exchange-sites-in-india",
+    ogImage: "https://mahadevbook.page/og-image.jpg",
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id":
+            "https://mahadevbook.page/blog/mahadev-book-best-cricket-betting-exchange-sites-in-india",
+        },
+        headline: "Mahadev Book – Best Cricket Betting Exchange Sites in India",
+        description:
+          "Compare the best cricket betting exchange sites in India with Mahadev Book — top odds, live in-play markets, fast withdrawals, and a trusted betting ID.",
+        image: "https://mahadevbook.page/blog-image.jpg",
+        author: { "@type": "Organization", name: "Mahadev Book" },
+        publisher: {
+          "@type": "Organization",
+          name: "Mahadev Book",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://mahadevbook.page/logo.png",
+          },
+        },
+        datePublished: "2026-08-17",
+        dateModified: "2026-08-17",
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://mahadevbook.page/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blog",
+            item: "https://mahadevbook.page/blog",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Mahadev Book – Best Cricket Betting Exchange Sites in India",
+            item: "https://mahadevbook.page/blog/mahadev-book-best-cricket-betting-exchange-sites-in-india",
+          },
+        ],
+      },
+    ],
   },
 };
 
@@ -122,14 +182,17 @@ export default async function ArticlePage({ params }: PageProps) {
 
   return (
     <>
-      {seo ? (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(seo.jsonLd),
-          }}
-        />
-      ) : null}
+      {seo
+        ? seo.jsonLd.map((schema, index) => (
+            <script
+              key={`${slug}-jsonld-${index}`}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(schema),
+              }}
+            />
+          ))
+        : null}
       <ReadingProgress />
       <Header variant="inner" active="blog" />
       <ArticleDetail article={article} related={related} popular={popular} />
